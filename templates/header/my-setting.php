@@ -27,7 +27,7 @@ if ( $myaccount_page_id ) {
 			<?php if (class_exists( 'YITH_WCWL' ) ):?>
 				<li><a href="<?php echo esc_url(YITH_WCWL::get_instance()->get_wishlist_url())?>"><i class="fa fa-heart"></i> <?php esc_html_e('Wish List','zorka') ?></a></li>
 			<?php endif;?>
-			<li><a href="<?php echo esc_url($woocommerce->cart->get_cart_url()) ?>"><i class="fa fa-shopping-cart"></i> <?php esc_html_e('Shopping Cart','zorka'); ?></a></li>
+			<li><a href="<?php echo esc_url($woocommerce->cart->wc_get_cart_url()) ?>"><i class="fa fa-shopping-cart"></i> <?php esc_html_e('Shopping Cart','zorka'); ?></a></li>
 			<li><a href="<?php echo esc_url($woocommerce->cart->get_checkout_url()) ?>"><i class="fa fa-share"></i> <?php esc_html_e('Checkout','zorka'); ?></a></li>
 		</ul>
 	</li>
