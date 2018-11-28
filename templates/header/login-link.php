@@ -6,9 +6,9 @@
 	<div class="zorka-login-link">
 			<?php if ( !is_user_logged_in() ):?>
 				<?php esc_html_e('Welcome Guest!','zorka');?>
-				<a class="zorka-login-link-sign-in" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php esc_html_e('Log In','zorka'); ?></a>
+				<a class="" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php esc_html_e('Log In','zorka'); ?></a>
 				<?php esc_html_e('Or','zorka');?>
-				<a class="zorka-login-link-sign-up" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php esc_html_e('Register','zorka'); ?></a>
+				<a class="" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php esc_html_e('Register','zorka'); ?></a>
 			<?php else:?>
 				<?php esc_html_e('Welcome ','zorka');?>
 				<?php
