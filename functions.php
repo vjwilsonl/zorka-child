@@ -9,7 +9,7 @@ function child_theme_enqueue_styles() {
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_stock', 10 );
 function woocommerce_template_loop_stock() {
     global $product;
-    if ( ! $product->managing_stock() && ! $product->is_in_stock() )
+    if ( $product->managing_stock() && ! $product->is_in_stock() )
         echo '<p class="stock out-of-stock">Out of Stock</p>';
 }
 
@@ -52,8 +52,8 @@ add_action( 'woocommerce_register_form', 'wc_register_form_password_repeat' );
 function wc_register_form_password_repeat() {
     ?>
     <p class="form-row form-row-wide">
-        <label for="reg_password2"><?php _e( 'Password Repeat', 'woocommerce' ); ?> <span class="required">*</span></label>
-        <input type="password" class="input-text" name="password2" id="reg_password2" value="<?php if ( ! empty( $_POST['password2'] ) ) echo esc_attr( $_POST['password2'] ); ?>" />
+        <label for="reg_password2"><?php _e( 'Confirm password', 'woocommerce' ); ?> <span class="required">*</span></label>
+        <input type="password" class="input-text" name="password2" id="reg_password2" value="" />
     </p>
     <?php
 }
