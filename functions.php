@@ -58,3 +58,21 @@ function wc_register_form_password_repeat() {
     <?php
 }
 ?>
+<?php
+
+function add_this_script_footer(){ ?>
+
+jQuery('.owl-carousel').owlCarousel({
+    loop:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:true
+        }
+    }
+})
+
+<?php } 
+
+add_action('wp_footer', 'add_this_script_footer', 20); ?>
